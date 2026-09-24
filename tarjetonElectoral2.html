@@ -190,7 +190,7 @@
 <!-- Action Deck Area -->
 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs pb-space-sm">
 <!-- Back to Identification Button -->
-<button class="min-h-[56px] px-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors active:scale-[0.98]" onclick="history.back()" type="button">
+<button class="min-h-[56px] px-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors active:scale-[0.98]" onclick="window.location.href='pasoIdentificacion1.html'" type="button">
 <span class="material-symbols-outlined text-[22px]">arrow_back</span>
 <span>Volver a Identificación</span>
 </button>
@@ -281,7 +281,7 @@
         // Proceed with flow feedback
         confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">sync</span><span>Registrando Voto...</span>';
         setTimeout(() => {
-          alert('Selección confirmada para: ' + selectedLabel.textContent + '. Pasando al resumen final.');
+          window.location.href = 'confirmacionVotoEmitido3.html';
         }, 350);
       });
     }

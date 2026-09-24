@@ -205,7 +205,7 @@
           btnContinue.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">refresh</span><span>Verificando Padrón...</span>';
           btnContinue.disabled = true;
           setTimeout(() => {
-            btnContinue.innerHTML = '<span class="material-symbols-outlined text-[24px]">verified</span><span>Identidad Confirmada</span>';
+            window.location.href = 'tarjetonElectoral2.html';
           }, 900);
         }
       });

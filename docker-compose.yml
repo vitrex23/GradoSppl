@@ -1,0 +1,7 @@
+services:
+  votaciones:
+    build: .
+    container_name: grado-sppl-votaciones
+    ports:
+      - "8080:80"
+    restart: unless-stopped
