@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#000000","on-background":"#191c1e","on-tertiary-fixed":"#002114","primary-fixed-dim":"#b9c7e4","tertiary-fixed":"#85f8c4","primary":"#000000","on-surface":"#191c1e","secondary-fixed":"#dce1ff","surface":"#f7f9fb","on-error-container":"#93000a","secondary-container":"#4069f2","inverse-surface":"#2d3133","error-container":"#ffdad6","surface-container-lowest":"#ffffff","outline":"#75777e","on-surface-variant":"#44474d","on-tertiary-fixed-variant":"#005137","on-secondary-fixed":"#001551","primary-container":"#0d1c32","surface-container-low":"#f2f4f6","surface-variant":"#e0e3e5","secondary-fixed-dim":"#b7c4ff","primary-fixed":"#d6e3ff","on-primary":"#ffffff","surface-bright":"#f7f9fb","tertiary-container":"#002114","on-primary-container":"#76849f","on-tertiary-container":"#069669","secondary":"#1d4ed8","surface-tint":"#515f78","on-secondary-fixed-variant":"#0039b5","inverse-on-surface":"#eff1f3","on-secondary-container":"#fffbff","surface-container-high":"#e6e8ea","outline-variant":"#c5c6cd","on-primary-fixed":"#0d1c32","surface-container-highest":"#e0e3e5","surface-dim":"#d8dadc","on-error":"#ffffff","on-primary-fixed-variant":"#39475f","surface-container":"#eceef0","on-secondary":"#ffffff","tertiary-fixed-dim":"#68dba9","inverse-primary":"#b9c7e4","on-tertiary":"#ffffff","background":"#f7f9fb","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"2rem","space-sm":"0.75rem","gutter":"1.5rem","space-md":"1.25rem","space-xl":"3rem","margin":"2rem","space-xs":"0.5rem"},"fontFamily":{"body-xl":["Inter"],"display-ballot-num":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"contest-meta":["Inter"]},"fontSize":{"body-xl":["1.25rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"500"}],"display-ballot-num":["4rem",{"lineHeight":"4.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0.02em","fontWeight":"700"}],"body-md":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["1.375rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"600"}],"label-md":["1rem",{"lineHeight":"1.375rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"0em","fontWeight":"700"}],"contest-meta":["0.9375rem",{"lineHeight":"1.25rem","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-primary-fixed text-[22px]">how_to_vote</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight">SGE Electoral</span><span class="font-contest-meta text-contest-meta text-on-surface-variant uppercase tracking-wider">Kiosk Admin Suite</span></div></div><div class="px-space-md py-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-contest-meta text-contest-meta text-on-surface">Sistema Conectado</span></div><span class="font-contest-meta text-contest-meta text-on-surface-variant">v4.2-SEC</span></div></div><nav class="flex flex-col gap-1 px-space-sm mt-space-sm" data-active-classes="bg-primary-container text-on-primary-fixed-variant font-label-md"><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Panel Principal</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="procesos-electorales" href="#"><span class="material-symbols-outlined text-[20px]">ballot</span>Procesos Electorales</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="candidaturas" href="#"><span class="material-symbols-outlined text-[20px]">smart_button</span>Candidaturas</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="identidad-visual" href="#"><span class="material-symbols-outlined text-[20px]">palette</span>Identidad Visual</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="auditoria-y-seguridad" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span>Auditoría y Seguridad</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="configuracion-del-sistema" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Configuración</a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">admin_panel_settings</span></div><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-on-surface truncate">Dra. Elena Valenzuela</span><span class="font-contest-meta text-contest-meta text-on-surface-variant truncate">Vocal Presidente Junta</span></div></div><div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant"><span class="font-contest-meta text-contest-meta text-on-surface-variant">Turno Diurno</span><a class="text-error hover:text-on-error-container transition-colors" data-path="inicio-sesion" href="#"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-secondary text-[20px]">event_available</span><span class="font-label-md text-label-md text-on-surface">Elecciones Generales 2025 - Período Activo</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="font-contest-meta text-contest-meta text-on-surface">Turno A (07:00 - 15:00)</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="bg-surface-container-low pl-9 pr-space-md py-2 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors w-64" placeholder="Buscar mesa, acta, candidato..." type="search"/></div><div class="flex items-center gap-space-xs"><button aria-label="Alertas y Notificaciones" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></button><button aria-label="Acciones Rápidas" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">bolt</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface tabular-nums">14:28:10</span><span class="font-contest-meta text-contest-meta text-on-surface-variant">Sincronizado NTP</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<!-- Page Header & Key Actions -->
+<div class="flex flex-col gap-space-md mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-contest-meta text-contest-meta text-secondary uppercase tracking-wider font-semibold">Censo &amp; Padrón Activo</span>
+<span class="text-outline-variant">•</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Sincronización Kioscos 100%</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gestión de Sufragantes y Padrón Electoral</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 max-w-4xl">
+          Control en tiempo real del censo de votantes, importación masiva por archivo Excel/CSV y autorizaciones de voto excepcional.
+        </p>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-3 rounded-xl bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm hover:bg-surface-container-high transition-all flex items-center gap-space-xs" id="btn-open-history">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">history</span>
+          Historial Cargas
+        </button>
+<button class="px-space-md py-3 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md shadow-sm hover:bg-secondary-container transition-all flex items-center gap-space-xs" id="btn-open-modal">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+          Autorizar Voto Excepcional
+        </button>
+</div>
+</div>
+<!-- Quick KPI Stats Bar -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-contest-meta text-contest-meta uppercase tracking-wider">Censo Registrado</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">groups</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">4,850</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">electores</span>
+</div>
+<div class="mt-3 flex items-center gap-2 text-on-surface-variant">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-contest-meta text-contest-meta">100% verificado por registraduría</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-contest-meta text-contest-meta uppercase tracking-wider">Votos Emitidos</span>
+<span class="material-symbols-outlined text-on-tertiary-container text-[22px]">how_to_vote</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">3,124</span>
+<span class="font-label-md text-label-md text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-0.5 rounded-md tabular-nums font-semibold">64.4%</span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 64.4%"></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-contest-meta text-contest-meta uppercase tracking-wider">Pendientes de Votar</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[22px]">schedule</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">1,726</span>
+<span class="font-label-md text-label-md text-on-surface-variant bg-surface-container-high px-2 py-0.5 rounded-md tabular-nums font-semibold">35.6%</span>
+</div>
+<div class="mt-3 w-full bg-surface-container rounded-full h-2 overflow-hidden">
+<div class="bg-outline text-surface-tint h-full rounded-full" style="width: 35.6%"></div>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-2">
+<span class="font-contest-meta text-contest-meta uppercase tracking-wider">Excepcionales Aprobados</span>
+<span class="material-symbols-outlined text-secondary text-[22px]">verified</span>
+</div>
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface tabular-nums">18</span>
+<span class="font-contest-meta text-contest-meta text-secondary">actas autorizadas</span>
+</div>
+<div class="mt-3 flex items-center justify-between text-on-surface-variant font-contest-meta text-contest-meta">
+<span>Último: Mesa 02</span>
+<span class="text-secondary font-semibold">Auditoría OK</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Top Area: Dropzone File Upload & Template Helper -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md mb-space-lg">
+<div class="lg:col-span-8 p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[26px]">upload_file</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Importar Sufragantes (.xls / .xlsx / .csv)</h2>
+</div>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant bg-surface-container px-3 py-1 rounded-full">Límite por lote: 15,000 registros</span>
+</div>
+<!-- Drag and drop zone -->
+<div class="relative group cursor-pointer p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all flex flex-col items-center justify-center text-center">
+<input accept=".xls,.xlsx,.csv" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full" id="file-uploader" type="file"/>
+<div class="w-16 h-16 rounded-2xl bg-surface-container-lowest shadow-sm flex items-center justify-center mb-space-sm text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[36px]">table_chart</span>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface">
+          Arrastre su archivo Excel aquí o <span class="text-secondary underline underline-offset-4">haga clic para examinar</span>
+</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Archivos compatibles: Microsoft Excel (.xlsx, .xls) o Valores delimitados por coma (.csv UTF-8)
+        </p>
+<!-- Columns required chip list -->
+<div class="mt-space-md flex flex-wrap items-center justify-center gap-space-xs">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant font-semibold uppercase mr-1">Columnas obligatorias:</span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-contest-meta text-contest-meta font-bold">[Ficha] <span class="text-on-surface-variant font-normal">(ej: 2847591)</span></span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-contest-meta text-contest-meta font-bold">[Jornada] <span class="text-on-surface-variant font-normal">(Mañana/Tarde/Noche/Sabatina)</span></span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-contest-meta text-contest-meta font-bold">[Documento] <span class="text-on-surface-variant font-normal">(Numérico C.C./T.I.)</span></span>
+<span class="px-2.5 py-1 rounded-lg bg-surface-container-highest text-on-surface font-contest-meta text-contest-meta font-bold">[Nombre] <span class="text-on-surface-variant font-normal">(Nombre completo)</span></span>
+</div>
+</div>
+</div>
+<!-- Instructions & Fast Resources Column -->
+<div class="lg:col-span-4 p-space-lg rounded-2xl bg-surface-container-low shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">info</span>
+<h3 class="font-label-lg text-label-lg">Parámetros de Validación</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+          El motor de censo coteja duplicados contra la base de datos central en tiempo real. Los registros repetidos o con documento inconsistente son descartados para auditoría.
+        </p>
+<div class="space-y-space-xs text-on-surface-variant font-contest-meta text-contest-meta">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">check_circle</span>
+<span>Verificación instantánea de no-doble votación</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">check_circle</span>
+<span>Asignación automática a kioscos por Jornada</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-tertiary-container text-[18px]">check_circle</span>
+<span>Cifrado de documento electoral SHA-256</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-space-md pt-space-sm">
+<a class="w-full py-3 px-space-md rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-label-md text-label-md shadow-sm transition-colors flex items-center justify-center gap-space-xs" href="#">
+<span class="material-symbols-outlined text-[20px] text-secondary">download</span>
+          Descargar Plantilla Oficial (.xlsx)
+        </a>
+<button class="w-full py-3 px-space-md rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors flex items-center justify-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">sync_problem</span>
+          Ver Errores de Último Lote (0)
+        </button>
+</div>
+</div>
+</div>
+<!-- Actions & Controls Bar -->
+<div class="p-space-md rounded-2xl bg-surface-container-lowest shadow-sm mb-space-md flex flex-wrap items-center justify-between gap-space-md">
+<!-- Search Input -->
+<div class="relative flex items-center flex-1 min-w-[280px]">
+<span class="material-symbols-outlined absolute left-3.5 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full bg-surface-container-low pl-10 pr-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="search-input" placeholder="Buscar por cédula, nombre completo o ficha..." type="search"/>
+</div>
+<!-- Filters & Actions -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Filter Jornada -->
+<div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1.5 rounded-xl">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">schedule</span>
+<select class="bg-transparent font-contest-meta text-contest-meta text-on-surface focus:outline-none cursor-pointer pr-2">
+<option value="todas">Jornada: Todas</option>
+<option value="manana">Mañana</option>
+<option value="tarde">Tarde</option>
+<option value="noche">Noche</option>
+<option value="sabatina">Sabatina</option>
+</select>
+</div>
+<!-- Filter Estado Voto -->
+<div class="flex items-center gap-1 bg-surface-container-low px-space-sm py-1.5 rounded-xl">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">filter_list</span>
+<select class="bg-transparent font-contest-meta text-contest-meta text-on-surface focus:outline-none cursor-pointer pr-2">
+<option value="todos">Estado: Todos</option>
+<option value="voto">Votó</option>
+<option value="pendiente">Pendiente</option>
+<option value="excepcional">Excepcional Autorizado</option>
+</select>
+</div>
+<!-- Export Button -->
+<button class="px-space-md py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors flex items-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+        Exportar Listado (Excel/PDF)
+      </button>
+</div>
+</div>
+<!-- Main High-Contrast Data Table -->
+<div class="w-full rounded-2xl bg-surface-container-lowest shadow-sm overflow-hidden mb-space-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface font-contest-meta text-contest-meta uppercase tracking-wider">
+<th class="py-space-md px-space-md font-semibold">Documento</th>
+<th class="py-space-md px-space-md font-semibold">Nombre Completo</th>
+<th class="py-space-md px-space-md font-semibold">Ficha / Programa</th>
+<th class="py-space-md px-space-md font-semibold">Jornada</th>
+<th class="py-space-md px-space-md font-semibold">Estado de Voto</th>
+<th class="py-space-md px-space-md font-semibold text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-md text-body-md text-on-surface">
+<!-- Row 1: Votó -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-md px-space-md font-semibold tabular-nums text-on-surface">
+              10.948.234
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">Cédula de Ciudadanía</span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+              Carlos Mendoza Silva
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">carlos.mendoza@academia.edu</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Ficha #2847591</span>
+<span class="block font-contest-meta text-contest-meta text-on-surface-variant">Ingeniería de Sistemas</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-contest-meta text-contest-meta font-semibold bg-surface-container-high text-on-surface">
+                Mañana
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/30 text-on-tertiary-container font-contest-meta text-contest-meta font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Votó - 09:42 AM - Mesa 04
+              </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Ver detalles y certificado">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Historial biométrico">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Pendiente -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-md px-space-md font-semibold tabular-nums text-on-surface">
+              1.032.485.901
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">Cédula de Ciudadanía</span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+              Andrea Torres Peña
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">a.torres@academia.edu</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Ficha #2691823</span>
+<span class="block font-contest-meta text-contest-meta text-on-surface-variant">Gestión Empresarial</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-contest-meta text-contest-meta font-semibold bg-surface-container-high text-on-surface">
+                Tarde
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-contest-meta text-contest-meta font-semibold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                Pendiente de Sufragio
+              </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Ver detalles">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Notificar recordatorio">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Excepcional Autorizado -->
+<tr class="hover:bg-surface-container-low/70 transition-colors bg-secondary-fixed/20">
+<td class="py-space-md px-space-md font-semibold tabular-nums text-on-surface">
+              79.845.120
+              <span class="block font-contest-meta text-contest-meta text-secondary font-semibold">Voto Excepcional #EX-018</span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+              Julián Castro Méndez
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">julian.castro@academia.edu</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Ficha #2754910</span>
+<span class="block font-contest-meta text-contest-meta text-on-surface-variant">Diseño Gráfico Publicitario</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-contest-meta text-contest-meta font-semibold bg-surface-container-high text-on-surface">
+                Noche
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-contest-meta text-contest-meta font-semibold">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+                Autorizado Mesa 01 (Acta 18)
+              </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest hover:bg-surface-container-high flex items-center justify-center text-secondary transition-colors" title="Ver Acta Excepcional">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
+<button class="w-9 h-9 rounded-lg hover:bg-error-container hover:text-on-error-container flex items-center justify-center text-outline transition-colors" title="Impugnar o Bloquear">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Votó -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-md px-space-md font-semibold tabular-nums text-on-surface">
+              1.018.992.411
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">Tarjeta de Identidad</span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+              Sofía Rincón Duarte
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">sofia.rincon@academia.edu</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Ficha #2847591</span>
+<span class="block font-contest-meta text-contest-meta text-on-surface-variant">Ingeniería de Sistemas</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-contest-meta text-contest-meta font-semibold bg-surface-container-high text-on-surface">
+                Mañana
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/30 text-on-tertiary-container font-contest-meta text-contest-meta font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+                Votó - 11:15 AM - Mesa 03
+              </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Ver detalles y certificado">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Historial biométrico">
+<span class="material-symbols-outlined text-[18px]">fingerprint</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Pendiente -->
+<tr class="hover:bg-surface-container-low/70 transition-colors">
+<td class="py-space-md px-space-md font-semibold tabular-nums text-on-surface">
+              1.090.384.221
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">Cédula de Ciudadanía</span>
+</td>
+<td class="py-space-md px-space-md font-semibold text-on-surface">
+              Valentina Morales Gómez
+              <span class="block font-contest-meta text-contest-meta text-on-surface-variant font-normal">v.morales@academia.edu</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface">Ficha #2830114</span>
+<span class="block font-contest-meta text-contest-meta text-on-surface-variant">Contabilidad y Finanzas</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full font-contest-meta text-contest-meta font-semibold bg-surface-container-high text-on-surface">
+                Sabatina
+              </span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-contest-meta text-contest-meta font-semibold">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+                Pendiente de Sufragio
+              </div>
+</td>
+<td class="py-space-md px-space-md text-right">
+<div class="inline-flex items-center gap-1">
+<button class="w-9 h-9 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" title="Ver detalles">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="w-9 h-9 rounded-lg hover:bg-error-container hover:text-on-error-container flex items-center justify-center text-outline transition-colors" title="Impugnar o Bloquear">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Dock -->
+<div class="p-space-md bg-surface-container-lowest flex flex-wrap items-center justify-between gap-space-md">
+<span class="font-body-md text-body-md text-on-surface-variant">
+        Mostrando <span class="font-semibold text-on-surface">1 - 5</span> de <span class="font-semibold text-on-surface">4,850</span> sufragantes registrados
+      </span>
+<div class="flex items-center gap-1">
+<button class="w-10 h-10 rounded-lg bg-surface-container-low text-on-surface-variant flex items-center justify-center hover:bg-surface-container-high transition-colors" disabled="">
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md">1</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">2</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">3</button>
+<span class="px-2 text-on-surface-variant">...</span>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors">485</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-low hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal UI for "Autorizar Voto Excepcional" -->
+<div class="fixed inset-0 bg-primary/60 backdrop-blur-sm z-50 flex items-center justify-center p-space-md hidden" id="modal-voto-excepcional">
+<div class="w-full max-w-2xl bg-surface-container-lowest rounded-2xl shadow-xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-secondary text-on-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[26px]">badge</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Autorizar Voto Excepcional en Mesa</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Habilita a un elector no listado en la mesa actual tras validación de la Comisión Electoral.
+            </p>
+</div>
+</div>
+<button class="w-10 h-10 rounded-lg hover:bg-surface-container-high flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" id="btn-close-modal">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+<!-- Modal Body Form -->
+<form class="p-space-lg flex flex-col gap-space-md" id="form-voto-excepcional" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Documento -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="modal-doc">
+              Documento de Identidad
+              <span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">id_card</span>
+<input class="w-full bg-surface-container-low pl-10 pr-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="modal-doc" inputmode="numeric" placeholder="Ej: 10948234" required="" type="text"/>
+</div>
+</div>
+<!-- Jornada -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="modal-jornada">
+              Jornada Electoral
+              <span class="text-error font-bold">*</span>
+</label>
+<select class="w-full bg-surface-container-low px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="modal-jornada" required="">
+<option value="manana">Jornada Mañana (07:00 - 13:00)</option>
+<option value="tarde">Jornada Tarde (13:00 - 18:00)</option>
+<option value="noche">Jornada Noche (18:00 - 22:00)</option>
+<option value="sabatina">Jornada Sabatina (08:00 - 16:00)</option>
+</select>
+</div>
+<!-- Nombre Completo -->
+<div class="flex flex-col gap-1.5 md:col-span-2">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="modal-name">
+              Nombre Completo del Sufragante
+              <span class="text-error font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">person</span>
+<input class="w-full bg-surface-container-low pl-10 pr-space-sm py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="modal-name" placeholder="Nombre y apellidos según documento oficial" required="" type="text"/>
+</div>
+</div>
+<!-- Ficha / Código -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="modal-ficha">
+              Ficha / Código Institucional
+              <span class="text-error font-bold">*</span>
+</label>
+<input class="w-full bg-surface-container-low px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-high transition-colors" id="modal-ficha" placeholder="Ej: 2847591 - Ing. Sistemas" required="" type="text"/>
+</div>
+<!-- Motivo Excepción -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface flex items-center gap-1" for="modal-motivo">
+              Motivo de Excepción
+              <span class="text-error font-bold">*</span>
+</label>
+<select class="w-full bg-surface-container-low px-space-md py-2.5 rounded-xl font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-high transition-colors cursor-pointer" id="modal-motivo" required="">
+<option value="traslado">Traslado de sede o mesa por fuerza mayor</option>
+<option value="omision">Omisión involuntaria en lista física</option>
+<option value="extemporanea">Matrícula o vinculación extemporánea</option>
+<option value="comision">Autorización expresa Comisión de Garantías</option>
+</select>
+</div>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex items-start gap-space-xs text-on-surface-variant font-contest-meta text-contest-meta">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0">gavel</span>
+<span>
+            Esta acción quedará grabada de manera irrevocable en la cadena de auditoría criptográfica con el usuario de sesión de <strong>Dra. Elena Valenzuela</strong>.
+          </span>
+</div>
+<!-- Modal Footer Actions -->
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-3 rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-md text-label-md transition-colors" id="btn-cancel-modal" type="button">
+            Cancelar
+          </button>
+<button class="px-space-lg py-3 rounded-xl bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md shadow-sm transition-all flex items-center gap-space-xs" id="btn-submit-modal" type="submit">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+            Autorizar y Permitir Voto
+          </button>
+</div>
+</form>
+</div>
+</div>
+<script>
+    (function() {
+      const openModalBtn = document.getElementById('btn-open-modal');
+      const closeModalBtn = document.getElementById('btn-close-modal');
+      const cancelModalBtn = document.getElementById('btn-cancel-modal');
+      const modal = document.getElementById('modal-voto-excepcional');
+      const form = document.getElementById('form-voto-excepcional');
+
+      function openModal() {
+        modal.classList.remove('hidden');
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+      }
+
+      if (openModalBtn) openModalBtn.addEventListener('click', openModal);
+      if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
+      if (cancelModalBtn) cancelModalBtn.addEventListener('click', closeModal);
+
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === modal) {
+            closeModal();
+          }
+        });
+      }
+
+      if (form) {
+        form.addEventListener('submit', function() {
+          const doc = document.getElementById('modal-doc').value;
+          const name = document.getElementById('modal-name').value;
+          if (doc && name) {
+            alert('Voto Excepcional autorizado con éxito para ' + name + ' (' + doc + '). Se ha emitido la credencial digital a la Mesa seleccionada.');
+            closeModal();
+            form.reset();
+          }
+        });
+      }
+
+      const fileUploader = document.getElementById('file-uploader');
+      if (fileUploader) {
+        fileUploader.addEventListener('change', function(e) {
+          if (e.target.files && e.target.files[0]) {
+            alert('Archivo detectado: ' + e.target.files[0].name + '.\nIniciando validación de columnas y censo...');
+          }
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

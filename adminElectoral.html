@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"tertiary":"#000000","on-background":"#191c1e","on-tertiary-fixed":"#002114","primary-fixed-dim":"#b9c7e4","tertiary-fixed":"#85f8c4","primary":"#000000","on-surface":"#191c1e","secondary-fixed":"#dce1ff","surface":"#f7f9fb","on-error-container":"#93000a","secondary-container":"#4069f2","inverse-surface":"#2d3133","error-container":"#ffdad6","surface-container-lowest":"#ffffff","outline":"#75777e","on-surface-variant":"#44474d","on-tertiary-fixed-variant":"#005137","on-secondary-fixed":"#001551","primary-container":"#0d1c32","surface-container-low":"#f2f4f6","surface-variant":"#e0e3e5","secondary-fixed-dim":"#b7c4ff","primary-fixed":"#d6e3ff","on-primary":"#ffffff","surface-bright":"#f7f9fb","tertiary-container":"#002114","on-primary-container":"#76849f","on-tertiary-container":"#069669","secondary":"#1d4ed8","surface-tint":"#515f78","on-secondary-fixed-variant":"#0039b5","inverse-on-surface":"#eff1f3","on-secondary-container":"#fffbff","surface-container-high":"#e6e8ea","outline-variant":"#c5c6cd","on-primary-fixed":"#0d1c32","surface-container-highest":"#e0e3e5","surface-dim":"#d8dadc","on-error":"#ffffff","on-primary-fixed-variant":"#39475f","surface-container":"#eceef0","on-secondary":"#ffffff","tertiary-fixed-dim":"#68dba9","inverse-primary":"#b9c7e4","on-tertiary":"#ffffff","background":"#f7f9fb","error":"#ba1a1a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-lg":"2rem","space-sm":"0.75rem","gutter":"1.5rem","space-md":"1.25rem","space-xl":"3rem","margin":"2rem","space-xs":"0.5rem"},"fontFamily":{"body-xl":["Inter"],"display-ballot-num":["Inter"],"headline-lg":["Inter"],"label-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"label-md":["Inter"],"headline-md":["Inter"],"contest-meta":["Inter"]},"fontSize":{"body-xl":["1.25rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"500"}],"display-ballot-num":["4rem",{"lineHeight":"4.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-lg":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0.02em","fontWeight":"700"}],"body-md":["1.125rem",{"lineHeight":"1.625rem","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["1.375rem",{"lineHeight":"1.875rem","letterSpacing":"0em","fontWeight":"600"}],"label-md":["1rem",{"lineHeight":"1.375rem","letterSpacing":"0.01em","fontWeight":"600"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","letterSpacing":"0em","fontWeight":"700"}],"contest-meta":["0.9375rem",{"lineHeight":"1.25rem","letterSpacing":"0.04em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-20 px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-primary-fixed text-[22px]">how_to_vote</span></div><div class="flex flex-col"><span class="font-label-lg text-label-lg text-on-surface leading-tight">SGE Electoral</span><span class="font-contest-meta text-contest-meta text-on-surface-variant uppercase tracking-wider">Kiosk Admin Suite</span></div></div><div class="px-space-md py-space-xs"><div class="flex items-center justify-between px-space-sm py-space-xs rounded-lg bg-surface-container-low"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-contest-meta text-contest-meta text-on-surface">Sistema Conectado</span></div><span class="font-contest-meta text-contest-meta text-on-surface-variant">v4.2-SEC</span></div></div><nav class="flex flex-col gap-1 px-space-sm mt-space-sm" data-active-classes="bg-primary-container text-on-primary-fixed-variant font-label-md"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-3 rounded-lg transition-colors bg-primary-container text-on-primary-fixed-variant font-label-md" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>Panel Principal</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="procesos-electorales" href="#"><span class="material-symbols-outlined text-[20px]">ballot</span>Procesos Electorales</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="candidaturas" href="#"><span class="material-symbols-outlined text-[20px]">smart_button</span>Candidaturas</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="identidad-visual" href="#"><span class="material-symbols-outlined text-[20px]">palette</span>Identidad Visual</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="auditoria-y-seguridad" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span>Auditoría y Seguridad</a><a class="flex items-center gap-space-sm px-space-md py-3 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface font-label-md text-label-md transition-colors" data-path="configuracion-del-sistema" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>Configuración</a></nav></div><div class="p-space-md m-space-sm rounded-xl bg-surface-container-low"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[20px]">admin_panel_settings</span></div><div class="flex flex-col overflow-hidden"><span class="font-label-md text-label-md text-on-surface truncate">Dra. Elena Valenzuela</span><span class="font-contest-meta text-contest-meta text-on-surface-variant truncate">Vocal Presidente Junta</span></div></div><div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant"><span class="font-contest-meta text-contest-meta text-on-surface-variant">Turno Diurno</span><a class="text-error hover:text-on-error-container transition-colors" data-path="inicio-sesion" href="#"><span class="material-symbols-outlined text-[18px]">logout</span></a></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-space-xs rounded-lg shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-secondary text-[20px]">event_available</span><span class="font-label-md text-label-md text-on-surface">Elecciones Generales 2025 - Período Activo</span></div><div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-space-xs rounded-lg text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">schedule</span><span class="font-contest-meta text-contest-meta text-on-surface">Turno A (07:00 - 15:00)</span></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="bg-surface-container-low pl-9 pr-space-md py-2 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container-lowest transition-colors w-64" placeholder="Buscar mesa, acta, candidato..." type="search"/></div><div class="flex items-center gap-space-xs"><button aria-label="Alertas y Notificaciones" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors relative" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error"></span></button><button aria-label="Acciones Rápidas" class="w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">bolt</span></button></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface tabular-nums">14:28:10</span><span class="font-contest-meta text-contest-meta text-on-surface-variant">Sincronizado NTP</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-20 w-full min-h-screen bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP CONTEXT RIBBON & BANNER -->
+<section class="flex flex-col gap-space-md">
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-primary-fixed">
+<span class="material-symbols-outlined text-[28px]">tune</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-contest-meta text-contest-meta uppercase tracking-wider text-on-surface-variant">Configuración Vigente</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-tertiary-container font-contest-meta text-contest-meta font-semibold">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span>
+              Activo / En Recepción de Candidatos
+            </span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Elecciones Institucionales 2025</span>
+</div>
+</div>
+<!-- Quick Metrics Bar -->
+<div class="flex flex-wrap items-center gap-space-sm w-full xl:w-auto">
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[20px]">groups</span>
+<div class="flex flex-col">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant leading-none">Padrón Electoral</span>
+<span class="font-label-md text-label-md text-on-surface leading-snug">4,850 electores</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[20px]">touch_app</span>
+<div class="flex flex-col">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant leading-none">Terminales Kiosco</span>
+<span class="font-label-md text-label-md text-on-surface leading-snug">18 Sincronizadas</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container-low px-space-sm py-2 rounded-lg">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">encrypted</span>
+<div class="flex flex-col">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant leading-none">Seguridad SHA-256</span>
+<span class="font-label-md text-label-md text-on-surface leading-snug">Validado</span>
+</div>
+</div>
+<button class="h-10 px-space-sm bg-primary-container text-on-primary-fixed hover:bg-secondary transition-colors rounded-lg font-label-md text-label-md flex items-center gap-1.5 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+<span>Simular Quiosco</span>
+</button>
+</div>
+</div>
+<!-- Page Title & Operational Subtitle -->
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Gestión Integral del Proceso Electoral y Configuración de Quiosco</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Administre convocatorias, registro de candidatos oficiales por jornada, personalización de interfaz táctil y políticas de seguridad del sistema.
+      </p>
+</div>
+</section>
+<!-- SECTION 1: PROCESOS Y CANDIDATOS -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Forms (5 cols) -->
+<div class="xl:col-span-5 flex flex-col gap-space-lg">
+<!-- Form 1: Crear Nuevo Proceso Electoral -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-low/50 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">domain_add</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Crear Nuevo Proceso Electoral</span>
+</div>
+<span class="font-contest-meta text-contest-meta bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Convocatoria</span>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="periodo-electoral">Año / Período</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="periodo-electoral" type="text" value="2025-I"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="tipo-proceso">Tipo Proceso</label>
+<select class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="tipo-proceso">
+<option>Elecciones Representantes</option>
+<option>Consejo Académico</option>
+<option>Decanaturas</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="nombre-convocatoria">Nombre Oficial de la Convocatoria</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="nombre-convocatoria" placeholder="Ej. Elección Representantes Estudiantiles y Docentes 2025" type="text" value="Elección de Representantes al Consejo Superior 2025"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Jornadas Habilitadas en Terminales</span>
+<div class="flex flex-wrap gap-space-sm">
+<label class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-contest-meta text-contest-meta text-on-surface">Mañana (07:00-13:00)</span>
+</label>
+<label class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-contest-meta text-contest-meta text-on-surface">Tarde (13:00-18:00)</span>
+</label>
+<label class="flex items-center gap-2 px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 accent-secondary rounded" type="checkbox"/>
+<span class="font-contest-meta text-contest-meta text-on-surface">Noche (18:00-22:00)</span>
+</label>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="fecha-apertura">Fecha y Hora Apertura</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="fecha-apertura" type="datetime-local" value="2025-05-14T07:00"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="fecha-cierre">Fecha y Hora Cierre</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="fecha-cierre" type="datetime-local" value="2025-05-14T20:00"/>
+</div>
+</div>
+<div class="pt-2 flex justify-end">
+<button class="w-full sm:w-auto h-11 px-space-md bg-secondary text-on-secondary rounded-lg font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span>Crear e Inicializar Proceso</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Form 2: Registrar Nuevo Candidato -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs bg-surface-container-low/50 -mx-space-md -mt-space-md px-space-md pt-space-md rounded-t-xl">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">person_add</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Registrar Nuevo Candidato</span>
+</div>
+<span class="font-contest-meta text-contest-meta bg-primary text-on-primary px-2 py-0.5 rounded">Tarjetón Quiosco</span>
+</div>
+<form class="flex flex-col gap-space-sm" onsubmit="event.preventDefault();">
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm">
+<div class="sm:col-span-2 flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="candidato-nombre">Nombre Completo del Candidato</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="candidato-nombre" placeholder="Ej. Dr. Fernando Torres" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="candidato-numero">N° Tarjetón</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-label-lg text-label-lg text-center font-bold text-secondary focus:bg-surface-container-lowest focus:outline-none transition-colors" id="candidato-numero" max="99" min="1" placeholder="06" type="number"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="candidato-jornada">Jornada Electoral</label>
+<select class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="candidato-jornada">
+<option>Todas las Jornadas</option>
+<option>Jornada Diurna (Mañana)</option>
+<option>Jornada Vespertina (Tarde)</option>
+<option>Jornada Nocturna (Noche)</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface" for="candidato-cargo">Titulación / Facultad / Cargo</label>
+<input class="h-11 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-colors" id="candidato-cargo" placeholder="Ej. Facultad de Ciencias Exactas" type="text"/>
+</div>
+</div>
+<!-- Dropzone Fotografía Oficial -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Fotografía Oficial para Tarjetón Kiosco</span>
+<div class="bg-surface-container-low hover:bg-surface-container rounded-xl p-space-md flex flex-col sm:flex-row items-center gap-space-md transition-colors cursor-pointer text-center sm:text-left">
+<div class="w-20 h-20 rounded-xl bg-surface-container-lowest flex items-center justify-center text-on-surface-variant shrink-0 shadow-sm overflow-hidden relative group">
+<img class="w-full h-full object-cover" data-alt="Official portrait studio photo of an academic election candidate wearing professional attire with soft studio lighting against a clean neutral grey backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMWmIqjhF5wroGM2nMj3RIcKzdBa8NQxgtH6gviE_ul5nzoMal7mDrUN6GXuQDnvp-Z4yZNaSC3kIyjxB3uw57GLNae3GEf9gSJItCQpwwFObdg4HYeE_wx9fqLBg--zcq0q1mBP0wr4Lm8llJnisrMK10rByTZR1MUi3hONbUGnG9lXrkhUADaBMF7OiKL4r2oJl2z9R32c1ao9uwJ7xgGNIuBIiiGX30T8r-XAeQ1wdEJMNhDoF6"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity text-on-primary">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center justify-center sm:justify-start gap-1 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[20px]">cloud_upload</span>
+<span>Seleccionar imagen o arrastrar aquí</span>
+</div>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant mt-1">
+                  Formatos permitidos: JPG, PNG sin transparencia. Máximo 2MB.
+                </span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant font-semibold">
+                  Relación 1:1 recomendada (400 × 400 px, fondo blanco uniforme).
+                </span>
+</div>
+</div>
+</div>
+<div class="pt-2 flex justify-end">
+<button class="w-full sm:w-auto h-12 px-space-md bg-primary text-on-primary rounded-lg font-label-md text-label-md hover:bg-on-surface transition-colors shadow-sm flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span>Guardar y Habilitar en Tarjetón</span>
+</button>
+</div>
+</form>
+</div>
+</div>
+<!-- RIGHT COLUMN: Data Table (7 cols) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md h-full justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">ballot</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Candidatos Registrados en el Sistema</h2>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">5 candidaturas oficiales configuradas en quioscos</span>
+</div>
+</div>
+<!-- Quick Export Buttons -->
+<div class="flex items-center gap-2">
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-contest-meta text-contest-meta flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar CSV</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-contest-meta text-contest-meta flex items-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">picture_as_pdf</span>
+<span>PDF Tarjetón</span>
+</button>
+</div>
+</div>
+<!-- Filter Bar and Search -->
+<div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm pt-2">
+<!-- Tabs Filter -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg gap-1 overflow-x-auto">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md shadow-sm whitespace-nowrap" type="button">
+                Todos (5)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+                Mañana (2)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+                Tarde (1)
+              </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors" type="button">
+                Noche (2)
+              </button>
+</div>
+<!-- Search input -->
+<div class="relative flex items-center w-full lg:w-64">
+<span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span>
+<input class="w-full bg-surface-container-low pl-9 pr-3 py-1.5 rounded-lg font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:bg-surface-container transition-colors" placeholder="Filtrar por nombre o cargo..." type="text"/>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto rounded-lg mt-space-xs">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-contest-meta text-contest-meta uppercase tracking-wider">
+<th class="py-3 px-3">Tarjetón</th>
+<th class="py-3 px-3">Candidato</th>
+<th class="py-3 px-3">Jornada</th>
+<th class="py-3 px-3">Titulación / Facultad</th>
+<th class="py-3 px-3">Estado</th>
+<th class="py-3 px-3 text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-transparent text-body-md">
+<!-- Row 1: Dra. Elena Ramos Morales -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold font-label-lg text-label-lg">
+                      01
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Official election portrait photo of Dr. Elena Ramos Morales, an intellectual Latina woman in a navy tailored jacket with a subtle warm smile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpS1RSI2vIjf-iZDx0jz-o_05skkFZH3RuLD3hzbiqwTGLyrwyyUg0Y9P43b34-N2zlChHR1Q-A3lYoNZDkw7xF-uofx6M855Zus8AeFG1kYmfglMNo-GLvztm2YRr6fTIKYrmBRgEM3LCPz95Oc5yTRb9262S2kECiLtJJ_FMGIk_SEqJo9Z5F_OiyHw2SycFzFmzwRU8L7Jujg9Z7SghHZA1LDAV5vPkvGCK0m6B1qwDXyMDW2W"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Dra. Elena Ramos Morales</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Lista Oficial #1</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Mañana
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Ciencias de la Salud
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Activo
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Vista Previa Kiosco" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</button>
+<button aria-label="Editar" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Deshabilitar" class="w-8 h-8 rounded flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Carlos Mario Benítez Vega -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold font-label-lg text-label-lg">
+                      02
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Official portrait photo of candidate Carlos Mario Benitez Vega, middle-aged Hispanic academic wearing glasses and a dark blazer against a grey backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsS-gIdf803z3EWOqSx-MQRWtmtnZWrO6Sr7ZRGQGpCkLgqLCMAkEi1Fs5K_6dAgRRrmDMWB37tI_OVIkkBcdMOW1stjPh681QcAdsW2HxHZRDQEyb5UEr_hFuK7vyhjF3d_5cIxMNDJYQH5Lp_yeZ51kv70dUUfmJusQ1GXurIy2T-x06e5jm1oPhcacte9YT1scq3EbxPgMInKZpnKXK8cnYcgsLagb2_XevyRU8nzdiv0Fo0N19"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Carlos Mario Benítez Vega</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Alianza Universitaria</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-primary-fixed font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Nocturna
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Ciencias Económicas
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Activo
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Vista Previa Kiosco" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</button>
+<button aria-label="Editar" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Deshabilitar" class="w-8 h-8 rounded flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Lucía Fernández Ortiz -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold font-label-lg text-label-lg">
+                      03
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Candidate portrait of Lucia Fernandez Ortiz, sharp contemporary headshot with warm studio light and formal shirt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR-T2jjYpSteB5Yb5-Uo3z7I4HVyu4U6sLDAol0yFvv_m48mWaaKBgKuksBvbxRZNxFGkWovJlXrnLTDo8FTY_wjKUv9MFISSaJw3Klrw_5a9sT-2_I_7pQzkxGdtvuMOu8N0krb_W5lROcHcqUZll5Va4qI9eLmMSDkkdogyL9J5oublOHWGLqBxAZQ1kkMSPHLVJb8t9y4CW0yvkWrVZCchhYsbJpZgb4IWaMfnQUUs7Xey6lv8z"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Lucía Fernández Ortiz</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Innovación Docente</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Tarde
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Facultad de Derecho
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Activo
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Vista Previa Kiosco" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</button>
+<button aria-label="Editar" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Deshabilitar" class="w-8 h-8 rounded flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Ing. Mateo Gómez Sandoval -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold font-label-lg text-label-lg">
+                      04
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Candidate portrait of Ing Mateo Gomez Sandoval, sharp academic photo of a male engineer in a charcoal shirt looking directly at camera with dignity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqZKVXhc6GnCQ3m2Ob_vhPzQ1eX06_HuRCJ_D4YoYB9_Puh93Sol6pxRCEFxJyTLrmOtmu6Gu2yb59zNYfPWfWL2cwzZZMfgyX5VBxhzgyFpDp3Z6wFJaFRkRO2oIvzEgJj91dcuMiX67LtsoRzk_vltNKmHY-FRG0IJSJfwN_BP9UR38zwgHxTBEFaxfF-vd_TmfJsnnIYXi5edN_LW1vonJIKUdPEJRPpdm6pSXEXjPJHURCXZx"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Ing. Mateo Gómez Sandoval</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Convergencia Tecnológica</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed/50 text-secondary font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Mañana
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Ingeniería de Sistemas
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Activo
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Vista Previa Kiosco" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</button>
+<button aria-label="Editar" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Deshabilitar" class="w-8 h-8 rounded flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Valeria Restrepo Castro -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-bold font-label-lg text-label-lg">
+                      05
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Candidate official headshot of Valeria Restrepo Castro, professional portrait against a uniform light studio backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmChcWXwJVHKr8law3E5I1b2A02Hk067LJyVytWlyoYe47iHsqToGjghCAVFzQcXcu_EtW0GQ4AFf2RePFRRhI62Em4SalxMq-J1W4K5Ee3h06iOzVdpdJefc3oYmpoBOklWnvmlJm6Y0TqYa_OorfjF0u9oBHSz5AYKDuEDLs88aQZ0C_V009-iRu6al0JW3xbT3sTZZrzBck-kjnRFDhNRmYOIfXdNsFl-3tgI48bqwEGS89P2WC"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Valeria Restrepo Castro</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Compromiso y Transparencia</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-primary-container text-primary-fixed font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Noche
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Ciencias Humanas
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+                      Activo
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<div class="inline-flex items-center gap-1">
+<button aria-label="Vista Previa Kiosco" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">touch_app</span>
+</button>
+<button aria-label="Editar" class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+<button aria-label="Deshabilitar" class="w-8 h-8 rounded flex items-center justify-center text-error hover:bg-error-container hover:text-on-error-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">block</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Voto en Blanco (System Reserved) -->
+<tr class="bg-surface-container-low/40">
+<td class="py-3 px-3">
+<span class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-surface-container text-on-surface-variant font-bold font-label-lg text-label-lg">
+                      VB
+                    </span>
+</td>
+<td class="py-3 px-3">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant shrink-0">
+<span class="material-symbols-outlined text-[20px]">check_box_outline_blank</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Voto en Blanco</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Opción Institucional Obligatoria</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-3">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-highest text-on-surface font-contest-meta text-contest-meta font-medium whitespace-nowrap">
+                      Global
+                    </span>
+</td>
+<td class="py-3 px-3 font-contest-meta text-contest-meta text-on-surface-variant">
+                    Disposición Estatutaria
+                  </td>
+<td class="py-3 px-3">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface font-contest-meta text-contest-meta">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                      Permanente
+                    </span>
+</td>
+<td class="py-3 px-3 text-right">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant italic px-2">No editable</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Table Footer: Pagination & Meta -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-sm border-t border-surface-container-low">
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">
+            Mostrando 5 candidatos habilitados + 1 opción institucional obligatoria
+          </span>
+<div class="flex items-center gap-2">
+<button class="h-8 px-3 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-contest-meta text-contest-meta disabled:opacity-50 transition-colors" disabled="" type="button">
+              Anterior
+            </button>
+<span class="font-contest-meta text-contest-meta text-on-surface font-semibold px-1">Página 1 de 1</span>
+<button class="h-8 px-3 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-contest-meta text-contest-meta disabled:opacity-50 transition-colors" disabled="" type="button">
+              Siguiente
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: IDENTIDAD VISUAL Y PERSONALIZACIÓN DEL QUIOSCO -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">palette</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Identidad Visual y Personalización del Quiosco</h2>
+<p class="font-contest-meta text-contest-meta text-on-surface-variant">Ajuste la apariencia institucional en los monitores táctiles de votación presencial</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Left Card: Recursos Gráficos -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Recursos Gráficos del Quiosco</span>
+<span class="font-contest-meta text-contest-meta bg-surface-container px-2 py-0.5 rounded text-on-surface-variant">Pantalla 1920×1080</span>
+</div>
+<!-- Banner Superior Dropzone -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Banner Superior Institucional (Encabezado)</label>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Rec. 1920 × 240 px</span>
+</div>
+<div class="relative w-full h-28 rounded-xl overflow-hidden bg-primary-container shadow-sm group">
+<div class="w-full h-full bg-cover bg-center" data-alt="High contrast institutional election header banner featuring geometric national motifs in deep royal blue, subtle golden seal watermark, and modern typography container." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7DHwU7kTVVcvvrObA_-w-eDvUzRfeQvHb4mKFggBYWps3qjyQnNO3toVq-3c9qFLnJiUNnA7wui0DPeDEdqFXa72QNLora4ezoFQptu8k1ZRFboM_nuHngHPzggoS7pRcDu8zwLAH-KfxnAOVZLVDeZE86YWp8WoBDrZxF8Tt1ddOVeCpz26mP1Db58m7hnwk-cuIP-NX5kUrLV-l-i0QzRaetOQcboJU04CsZfuuSaeyngyu6NcU')"></div>
+<div class="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="px-3 py-1.5 bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1 shadow-md" type="button">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span>Cambiar Banner</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Marca de Agua / Fondo de Pantalla -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<label class="font-label-md text-label-md text-on-surface">Marca de Agua / Escudo Electoral de Fondo</label>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">PNG Transparente</span>
+</div>
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">escudo_institucional_vector.png</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Opacidad activa: 15% sobre fondo neutro</span>
+</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface-container hover:bg-surface-container-high font-label-md text-label-md text-on-surface transition-colors" type="button">
+                Reemplazar
+              </button>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between text-on-surface-variant font-contest-meta text-contest-meta">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+            Compresión automática activada para monitores de baja latencia
+          </span>
+</div>
+</div>
+<!-- Right Card: Paleta de Color y Tema Visual -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md justify-between">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Paleta de Color y Tema Visual</span>
+<span class="font-contest-meta text-contest-meta bg-secondary-fixed text-on-secondary-fixed px-2 py-0.5 rounded font-semibold">WCAG AAA</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- Primary Color Picker -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface">Color Primario Institucional</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Encabezados y marcos táctiles</span>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-8 h-8 rounded-lg bg-[#0a192f] shadow-sm shrink-0"></div>
+<input class="h-9 w-full px-2 rounded bg-surface-container-lowest font-contest-meta text-contest-meta uppercase text-on-surface font-bold focus:outline-none" type="text" value="#0a192f"/>
+</div>
+</div>
+<!-- Accent Color Picker -->
+<div class="flex flex-col gap-1 p-space-sm rounded-xl bg-surface-container-low">
+<span class="font-label-md text-label-md text-on-surface">Color de Acento / Selección</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Botones "Siguiente" y selección</span>
+<div class="flex items-center gap-2 mt-1">
+<div class="w-8 h-8 rounded-lg bg-[#1d4ed8] shadow-sm shrink-0"></div>
+<input class="h-9 w-full px-2 rounded bg-surface-container-lowest font-contest-meta text-contest-meta uppercase text-on-surface font-bold focus:outline-none" type="text" value="#1d4ed8"/>
+</div>
+</div>
+</div>
+<!-- Neutral Background Mode Selector -->
+<div class="flex flex-col gap-1.5">
+<span class="font-label-md text-label-md text-on-surface">Tono de Fondo del Kiosco</span>
+<div class="grid grid-cols-2 gap-space-sm">
+<label class="flex items-center gap-2 p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 accent-secondary" name="bg-mode" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Claro Institucional</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Estándar (#f8fafc)</span>
+</div>
+</label>
+<label class="flex items-center gap-2 p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 accent-secondary" name="bg-mode" type="radio"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Bicolor Alto Contraste</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Accesibilidad visual</span>
+</div>
+</label>
+</div>
+</div>
+<!-- High contrast switch toggle -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">contrast</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Modo Alto Contraste Asistido</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant">Botón flotante en pantalla para electores</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</label>
+</div>
+</div>
+<div class="pt-space-xs flex justify-end">
+<button class="w-full sm:w-auto h-12 px-space-md bg-secondary text-on-secondary rounded-lg font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm flex items-center justify-center gap-2" type="button">
+<span class="material-symbols-outlined text-[20px]">sync</span>
+<span>Aplicar Cambios a Terminales Táctiles</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: ZONA DE PELIGRO (CRITICAL AUDIT & MAINTENANCE ZONE) -->
+<section class="flex flex-col gap-space-sm mb-space-lg">
+<div class="bg-error-container/30 rounded-xl p-space-md flex flex-col gap-space-md shadow-sm">
+<!-- Danger Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs border-b border-error/20">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-error-container">Zona Crítica de Mantenimiento y Auditoría</h2>
+<span class="font-contest-meta text-contest-meta text-on-error-container/80">Acceso restringido a Vocales y Administradores Centrales</span>
+</div>
+</div>
+<span class="px-3 py-1 rounded bg-error text-on-error font-contest-meta text-contest-meta font-bold uppercase tracking-wider self-start sm:self-auto">
+          Operaciones Destructivas
+        </span>
+</div>
+<p class="font-body-md text-body-md text-on-error-container">
+        Las siguientes acciones son irreversibles y afectan directamente los registros encriptados, contadores locales de quiosco y los votos de las mesas electorales activas. Asegúrese de contar con la autorización de la Junta Electoral.
+      </p>
+<!-- Danger Actions Rows -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+<!-- Action 1: Respaldo Criptográfico -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">download_for_offline</span>
+<span class="font-label-lg text-label-lg text-on-surface">Descargar Respaldo Criptográfico Completo</span>
+</div>
+<p class="font-contest-meta text-contest-meta text-on-surface-variant">
+              Genera un archivo firmado digitalmente (.enc-tar) con los sufragios, actas de apertura, logs de auditoría y claves públicas de cada mesa.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<button class="h-11 px-space-md bg-surface-container-low hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">key</span>
+<span>Descargar Respaldo Seguro (.ENC)</span>
+</button>
+</div>
+</div>
+<!-- Action 2: Vaciar Base de Datos -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-[22px]">delete_forever</span>
+<span class="font-label-lg text-label-lg text-error">Vaciar Base de Datos y Reiniciar Conteo</span>
+</div>
+<p class="font-contest-meta text-contest-meta text-on-surface-variant">
+              Elimina permanentemente todos los sufragios registrados, resetea los contadores de las cabinas y purga el tarjetón electoral de la memoria local.
+            </p>
+</div>
+<div class="flex justify-end pt-2">
+<button class="h-11 px-space-md bg-error text-on-error rounded-lg font-label-md text-label-md hover:bg-on-error-container transition-colors shadow-sm flex items-center gap-2" id="btn-abrir-modal-peligro" type="button">
+<span class="material-symbols-outlined text-[20px]">delete_sweep</span>
+<span>⚠️ Vaciar Base de Datos</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CONFIRMATION MODAL (Controlled via Vanilla JS) -->
+<div aria-labelledby="modal-titulo" aria-modal="true" class="fixed inset-0 z-50 bg-primary/70 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="modal-confirmacion-peligro" role="dialog">
+<div class="bg-surface-container-lowest rounded-2xl max-w-lg w-full p-space-lg shadow-2xl flex flex-col gap-space-md">
+<!-- Modal Header -->
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-xl bg-error-container text-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">crisis_alert</span>
+</div>
+<div class="flex flex-col">
+<span class="font-contest-meta text-contest-meta text-error font-bold uppercase tracking-wider">Acción Crítica e Irreversible</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface leading-tight" id="modal-titulo">Confirmación Requerida: Vaciar Base de Datos</h3>
+</div>
+</div>
+<!-- Modal Body -->
+<div class="flex flex-col gap-space-sm">
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Esta acción destruirá las actas electrónicas, votos sufragados hasta el momento y la configuración de las 18 terminales conectadas.
+        </p>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<span class="font-contest-meta text-contest-meta text-on-surface font-semibold">Para confirmar el procedimiento, escriba exactamente en mayúsculas:</span>
+<span class="font-label-lg text-label-lg font-mono text-error select-all">CONFIRMAR-VACIADO</span>
+<input class="h-11 px-3 mt-1 rounded bg-surface-container-lowest text-on-surface font-mono font-bold tracking-wider uppercase text-center focus:outline-none focus:ring-2 focus:ring-error transition-all" id="input-confirmar-vaciado" placeholder="CONFIRMAR-VACIADO" type="text"/>
+</div>
+</div>
+<!-- Modal Actions -->
+<div class="flex flex-col sm:flex-row items-center justify-end gap-space-sm pt-space-xs">
+<button class="w-full sm:w-auto h-11 px-space-md bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md rounded-lg transition-colors" id="btn-cancelar-modal" type="button">
+          Cancelar Operación
+        </button>
+<button class="w-full sm:w-auto h-11 px-space-md bg-error text-on-error font-label-md text-label-md rounded-lg opacity-40 cursor-not-allowed transition-all flex items-center justify-center gap-1.5 shadow-sm" disabled="" id="btn-ejecutar-vaciado" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+<span>Entiendo las consecuencias, vaciar sistema</span>
+</button>
+</div>
+</div>
+</div>
+<!-- INLINE VANILLA JS FOR DANGER MODAL BEHAVIOR -->
+<script>
+    (function() {
+      const openBtn = document.getElementById('btn-abrir-modal-peligro');
+      const closeBtn = document.getElementById('btn-cancelar-modal');
+      const modal = document.getElementById('modal-confirmacion-peligro');
+      const input = document.getElementById('input-confirmar-vaciado');
+      const executeBtn = document.getElementById('btn-ejecutar-vaciado');
+
+      if (!openBtn || !closeBtn || !modal || !input || !executeBtn) return;
+
+      openBtn.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        input.value = '';
+        executeBtn.disabled = true;
+        executeBtn.classList.add('opacity-40', 'cursor-not-allowed');
+        input.focus();
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.add('hidden');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+        }
+      });
+
+      input.addEventListener('input', (e) => {
+        const val = e.target.value.trim();
+        if (val === 'CONFIRMAR-VACIADO') {
+          executeBtn.disabled = false;
+          executeBtn.classList.remove('opacity-40', 'cursor-not-allowed');
+          executeBtn.classList.add('hover:bg-on-error-container');
+        } else {
+          executeBtn.disabled = true;
+          executeBtn.classList.add('opacity-40', 'cursor-not-allowed');
+          executeBtn.classList.remove('hover:bg-on-error-container');
+        }
+      });
+
+      executeBtn.addEventListener('click', () => {
+        if (!executeBtn.disabled) {
+          executeBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">progress_activity</span> Purgando Base de Datos...';
+          setTimeout(() => {
+            alert('La base de datos electoral ha sido purgada y restablecida satisfactoriamente a valores de fábrica.');
+            modal.classList.add('hidden');
+            executeBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">delete_forever</span> Entiendo las consecuencias, vaciar sistema';
+          }, 1200);
+        }
+      });
+    })();
+  </script>
+</div></main></div></body></html>
