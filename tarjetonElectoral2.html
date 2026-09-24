@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;user-select:none;-webkit-touch-callout:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-tertiary-fixed-variant": "#005137", "surface": "#f7f9fb", "secondary": "#1d4ed8", "inverse-surface": "#2d3133", "on-surface": "#191c1e", "on-secondary-fixed": "#001551", "surface-container-lowest": "#ffffff", "error-container": "#ffdad6", "inverse-primary": "#b9c7e4", "surface-dim": "#d8dadc", "on-tertiary-container": "#069669", "tertiary-fixed": "#85f8c4", "outline": "#75777e", "primary-container": "#0d1c32", "surface-container-low": "#f2f4f6", "tertiary": "#000000", "secondary-fixed-dim": "#b7c4ff", "on-background": "#191c1e", "surface-bright": "#f7f9fb", "on-secondary-container": "#fffbff", "outline-variant": "#c5c6cd", "on-tertiary": "#ffffff", "error": "#ba1a1a", "secondary-container": "#4069f2", "on-error": "#ffffff", "on-primary": "#ffffff", "tertiary-container": "#002114", "on-primary-container": "#76849f", "on-secondary-fixed-variant": "#0039b5", "primary-fixed": "#d6e3ff", "background": "#f7f9fb", "on-primary-fixed-variant": "#39475f", "inverse-on-surface": "#eff1f3", "on-primary-fixed": "#0d1c32", "on-tertiary-fixed": "#002114", "on-secondary": "#ffffff", "on-surface-variant": "#44474d", "surface-container-highest": "#e0e3e5", "primary-fixed-dim": "#b9c7e4", "on-error-container": "#93000a", "secondary-fixed": "#dce1ff", "primary": "#000000", "surface-container": "#eceef0", "surface-tint": "#515f78", "tertiary-fixed-dim": "#68dba9", "surface-variant": "#e0e3e5", "surface-container-high": "#e6e8ea" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1.25rem", "gutter": "1.5rem", "margin": "2rem", "space-xs": "0.5rem", "space-lg": "2rem", "space-xl": "3rem", "space-sm": "0.75rem" }, "fontFamily": { "label-md": ["Inter"], "display-ballot-num": ["Inter"], "label-lg": ["Inter"], "body-md": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "headline-lg": ["Inter"], "body-xl": ["Inter"], "contest-meta": ["Inter"] }, "fontSize": { "label-md": ["1rem", { "lineHeight": "1.375rem", "letterSpacing": "0.01em", "fontWeight": "600" }], "display-ballot-num": ["4rem", { "lineHeight": "4.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-lg": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0.02em", "fontWeight": "700" }], "body-md": ["1.125rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["1.375rem", { "lineHeight": "1.875rem", "letterSpacing": "0em", "fontWeight": "600" }], "headline-md": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "0em", "fontWeight": "700" }], "headline-lg": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-xl": ["1.25rem", { "lineHeight": "1.875rem", "letterSpacing": "0em", "fontWeight": "500" }], "contest-meta": ["0.9375rem", { "lineHeight": "1.25rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen antialiased select-none"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-24 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary shrink-0"><span class="material-symbols-outlined text-[28px]">how_to_vote</span></div><div class="flex flex-col"><div class="flex items-center gap-2"><span class="font-contest-meta text-contest-meta uppercase tracking-wider text-secondary font-bold">Oficial</span><span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span><span class="font-contest-meta text-contest-meta text-on-surface-variant font-semibold">Mesa 04 • Cabina 2</span></div><h1 class="font-headline-sm text-headline-sm text-on-surface leading-tight truncate">Sistema de Votación Electrónica</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Ajustar Tamaño de Texto" class="min-w-[48px] min-h-[48px] rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">format_size</span></button><button aria-label="Guía de Audio" class="min-w-[48px] min-h-[48px] rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="Alto Contraste" class="min-w-[48px] min-h-[48px] rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="Cambiar Idioma" class="min-w-[48px] min-h-[48px] px-3 rounded-lg bg-surface-container hover:bg-surface-container-high flex items-center gap-1 text-on-surface font-label-md text-label-md transition-colors"><span class="material-symbols-outlined text-[20px]">language</span><span>ES</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-24 pb-28 px-gutter bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Progress Header & Context Banner -->
+<div class="flex flex-col gap-space-sm mb-space-md">
+<!-- Step Badge and Contest Title -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl p-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="px-3 py-1.5 rounded-lg bg-secondary-container text-on-secondary-container font-contest-meta text-contest-meta uppercase font-bold tracking-wide">
+          Paso 2 de 3
+        </span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">
+          Selección de Candidatura
+        </h2>
+</div>
+<div class="hidden sm:flex items-center gap-1 text-on-surface-variant font-contest-meta text-contest-meta">
+<span class="material-symbols-outlined text-[20px] text-secondary">touch_app</span>
+<span>Toque sobre la tarjeta para elegir</span>
+</div>
+</div>
+<!-- Official Instruction Banner -->
+<div class="flex items-center gap-space-sm bg-surface-container-highest/60 rounded-xl p-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">info</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+        Seleccione un único candidato o la opción <strong>Voto en Blanco</strong> para continuar.
+      </p>
+</div>
+</div>
+<!-- Candidates Selection Grid -->
+<div aria-label="Tarjetón Electoral de Candidatos" class="grid grid-cols-1 md:grid-cols-2 gap-space-md mb-space-lg" id="ballot-grid" role="radiogroup">
+<!-- Candidate 01 -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="1" data-candidate-name="Dra. Elena Ramos Morales" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Number Badge -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container text-on-surface shrink-0 font-headline-md text-headline-md font-bold transition-colors">
+          01
+        </div>
+<!-- Portrait -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional studio portrait of Dr. Elena Ramos Morales, an experienced Hispanic woman engineer in her late 30s with warm confident smile, tailored navy blazer, soft neutral studio lighting, high resolution civic portrait photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-GLchZzxPcrSGV2-DVPQtAaa39SzkZfrJOavdoUAY4r4LXq1t3g_r_6K5ILN-kSKqjXqOtC5WtKB9dYAi4X_bhachoQaPC79195dd0fYqhm14xtduSLHswgpuFNTMwwZY87xQpmcIJgfm185IX-TPKVlbUYMHzVIAB6WUQ6ZMvFO7KNMoZ5kE8x-bS5qMxP0qNH7q0PxYSX13odJsjM9PDsLi4XdZRhkdBJxQsvsg49gvhbo3JAW0"/>
+</div>
+<!-- Candidate Information -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Dra. Elena Ramos Morales</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 font-semibold">Jornada Diurna</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm truncate mt-0.5">Ingeniería de Sistemas y Computación</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+<!-- Candidate 02 -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="2" data-candidate-name="Carlos Mario Benítez Vega" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Number Badge -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container text-on-surface shrink-0 font-headline-md text-headline-md font-bold transition-colors">
+          02
+        </div>
+<!-- Portrait -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional studio photo of Carlos Mario Benitez Vega, a Latino man in his early 40s wearing a clean white shirt and dark vest, trustworthy smile, crisp institutional lighting, civic electoral portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuApRVJK6UW4uj6nl0LXsXCR6L_RfMhf69FbcoGOrdYiX-mjDcaKOhLJX0odnMTZW2q3rWWP0PD4kAn6QfyHmkWwYlak2w7s6t5UMra4HZftA16u6_QgMyG7ljhTZuXOS9Xl9HLrUbSIRfEz_vAqRt94Fx8gr9BqvuRRgQtQiYo9DktfbsJdomn2kEbpNc2OfggcgUBfV7owitwkwdfQr2LoHVEBdWfU5gS5A0sNH_BXVEd8SDQTxqfu"/>
+</div>
+<!-- Candidate Information -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Carlos Mario Benítez Vega</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 font-semibold">Jornada Nocturna</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm truncate mt-0.5">Administración de Empresas</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+<!-- Candidate 03 -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="3" data-candidate-name="Lucía Fernández Ortiz" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Number Badge -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container text-on-surface shrink-0 font-headline-md text-headline-md font-bold transition-colors">
+          03
+        </div>
+<!-- Portrait -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Friendly dignified photographic headshot of Lucia Fernandez Ortiz, Hispanic woman lawyer in formal attire with elegant demeanor, soft balanced grey background, high resolution election ballot photo." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlqSYY0caDuWQMK4Yj6P7zt_MB_IEtxL9mDfSXNXB6iLclLNSTOeTlVRuibtMCVwosayP2HmdOUz2cDhaJawuS1bnIiPF7t0SXjUtqSYpZQceJ8r-BcYe1nQxUXdQ89MsJS1Sl879otA25AGApVHvrOXA7OoMXd_L8lIj2rUXp2w2P0X0cj64os0jTxeJJ1-1hgAuIZ3MQzjG-_ZjdZ0oTN9WwTZ9_4nO5ovdPtUYSB9YsoxWPuBBc"/>
+</div>
+<!-- Candidate Information -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Lucía Fernández Ortiz</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 font-semibold">Jornada Completa</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm truncate mt-0.5">Derecho y Ciencias Políticas</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+<!-- Candidate 04 -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="4" data-candidate-name="Ing. Mateo Gómez Sandoval" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Number Badge -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container text-on-surface shrink-0 font-headline-md text-headline-md font-bold transition-colors">
+          04
+        </div>
+<!-- Portrait -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Professional election card portrait of Mateo Gomez Sandoval, architect in minimalist dark sweater, sharp friendly expression, balanced lighting, modern professional electoral framing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYcRKixwxiURScOPkGpbdTspWlneQ4LI5Kc2kGxE8_2p7T2dxX5a9sPbI6BCgHvsqtvhD6RDjv1oJAcAqEIeFGFQVW1BEoElAa_f6s37eh3ZbBK1s5tvMmqljoccUVtcFIyRUCY-O_DMRFxLEQcfsxAg3JJLVmptx1tgFMPo-wVWXVDAvpqU3c5Q8QW_b-rfUo1EMawBeie4qm2svTgo02kF-DTdZV7wo1wW03zFz62dihNLp7Y6hm"/>
+</div>
+<!-- Candidate Information -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Ing. Mateo Gómez Sandoval</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 font-semibold">Jornada Diurna</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm truncate mt-0.5">Arquitectura y Urbanismo</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+<!-- Candidate 05 -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="5" data-candidate-name="Valeria Restrepo Castro" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Number Badge -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container text-on-surface shrink-0 font-headline-md text-headline-md font-bold transition-colors">
+          05
+        </div>
+<!-- Portrait -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container-high shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Authentic civic ballot headshot portrait of Valeria Restrepo Castro, medical professional woman with approachable kind smile, clean corporate medical attire, solid neutral backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQfLSE_r4uU7v1Yk2KTq2UYAHEC3gk8iDvoBTYOiHyZb2MOAAQpKfVBkVYKrXM9NulFzvUvhWZawZrKGzsf0ilW7CBdcYgg1aaJAKWuPrCb4Q9K3LB91kdyOASIiXGlY63M0B6qPND1o6gmATwQebvOpJINL2QwjL_KwOMC-NEP_b9sIJp0kU6RnYDITo_9eUcQ0rneW6PYkfK7aibmPaxPf7h3qzvpbC15JGviTuNhHWPIP4cUOuj"/>
+</div>
+<!-- Candidate Information -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Valeria Restrepo Castro</span>
+<span class="font-label-md text-label-md text-secondary mt-0.5 font-semibold">Jornada Sabatina</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm truncate mt-0.5">Medicina y Salud Comunitaria</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+<!-- Distinct 'Voto en Blanco' Card -->
+<div aria-checked="false" class="candidate-card group relative flex flex-col justify-between p-space-md rounded-xl bg-surface-container-high shadow-sm hover:shadow-md transition-all duration-150 cursor-pointer min-h-[140px]" data-candidate-id="blanco" data-candidate-name="Voto en Blanco" role="radio" tabindex="0">
+<div class="flex items-start gap-space-md">
+<!-- Neutral Ballot Symbol -->
+<div class="badge-box flex flex-col items-center justify-center w-14 h-14 rounded-lg bg-surface-container-lowest text-on-surface shrink-0 shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[32px] text-on-surface-variant">ballot</span>
+</div>
+<!-- Blank Option Graphic placeholder / avatar -->
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 bg-surface-container flex items-center justify-center text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[32px]">check_box_outline_blank</span>
+</div>
+<!-- Option details -->
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate leading-tight">Voto en Blanco</span>
+<span class="font-contest-meta text-contest-meta text-on-surface-variant uppercase font-bold mt-0.5">Opción Institucional</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-sm leading-snug mt-0.5">Abstención legal y democrática de voto por candidatos</span>
+</div>
+<!-- Selection Touch Radio -->
+<div class="radio-indicator w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-transparent shrink-0 self-center transition-all">
+<span class="material-symbols-outlined text-[24px]">check</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Selected Feedback Toast Banner -->
+<div class="hidden items-center justify-between p-space-sm px-space-md bg-secondary text-on-secondary rounded-xl shadow-md mb-space-md" id="selection-summary-toast">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[28px]">verified</span>
+<div class="flex flex-col">
+<span class="font-contest-meta text-contest-meta uppercase opacity-80">Opción Marcada:</span>
+<span class="font-label-lg text-label-lg" id="selected-name-label">Ninguna</span>
+</div>
+</div>
+<span class="font-contest-meta text-contest-meta opacity-90 hidden sm:inline">Toque 'Confirmar y Votar' para continuar</span>
+</div>
+<!-- Action Deck Area -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md pt-space-xs pb-space-sm">
+<!-- Back to Identification Button -->
+<button class="min-h-[56px] px-space-lg rounded-xl bg-surface-container-high hover:bg-surface-container-highest text-on-surface flex items-center justify-center gap-2 font-label-lg text-label-lg transition-colors active:scale-[0.98]" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[22px]">arrow_back</span>
+<span>Volver a Identificación</span>
+</button>
+<!-- Confirm & Vote Button -->
+<button class="min-h-[56px] px-space-xl rounded-xl bg-surface-container-high text-on-surface-variant opacity-60 cursor-not-allowed flex items-center justify-center gap-3 font-label-lg text-label-lg shadow-sm transition-all duration-150" disabled="" id="btn-confirm-vote" type="button">
+<span class="material-symbols-outlined text-[24px]">how_to_reg</span>
+<span>Confirmar y Votar</span>
+</button>
+</div>
+</div>
+<script>
+  (function() {
+    const cards = document.querySelectorAll('.candidate-card');
+    const confirmBtn = document.getElementById('btn-confirm-vote');
+    const toast = document.getElementById('selection-summary-toast');
+    const selectedLabel = document.getElementById('selected-name-label');
+    let selectedId = null;
+
+    function applySelection(card) {
+      cards.forEach(c => {
+        c.setAttribute('aria-checked', 'false');
+        c.classList.remove('bg-secondary/10', 'shadow-md');
+        c.classList.add('bg-surface-container-lowest');
+        
+        // Reset check indicator
+        const radio = c.querySelector('.radio-indicator');
+        if (radio) {
+          radio.classList.remove('bg-secondary', 'text-on-secondary');
+          radio.classList.add('bg-surface-container', 'text-transparent');
+        }
+
+        // Reset badge
+        const badge = c.querySelector('.badge-box');
+        if (badge) {
+          badge.classList.remove('bg-secondary', 'text-on-secondary');
+          badge.classList.add('bg-surface-container', 'text-on-surface');
+        }
+      });
+
+      // Style selected card
+      card.setAttribute('aria-checked', 'true');
+      card.classList.remove('bg-surface-container-lowest', 'bg-surface-container-high');
+      card.classList.add('bg-secondary/10', 'shadow-md');
+
+      const radio = card.querySelector('.radio-indicator');
+      if (radio) {
+        radio.classList.remove('bg-surface-container', 'bg-surface-container-lowest', 'text-transparent');
+        radio.classList.add('bg-secondary', 'text-on-secondary');
+      }
+
+      const badge = card.querySelector('.badge-box');
+      if (badge) {
+        badge.classList.remove('bg-surface-container', 'bg-surface-container-lowest', 'text-on-surface');
+        badge.classList.add('bg-secondary', 'text-on-secondary');
+      }
+
+      selectedId = card.getAttribute('data-candidate-id');
+      const candidateName = card.getAttribute('data-candidate-name');
+
+      // Update feedback banner
+      if (toast && selectedLabel) {
+        selectedLabel.textContent = candidateName;
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+      }
+
+      // Unlock Confirmation Button with strong accessible styling
+      if (confirmBtn) {
+        confirmBtn.removeAttribute('disabled');
+        confirmBtn.classList.remove('bg-surface-container-high', 'text-on-surface-variant', 'opacity-60', 'cursor-not-allowed');
+        confirmBtn.classList.add('bg-on-tertiary-container', 'text-on-tertiary', 'shadow-lg', 'hover:opacity-95', 'active:scale-[0.98]', 'cursor-pointer');
+      }
+    }
+
+    cards.forEach(card => {
+      card.addEventListener('click', () => applySelection(card));
+      card.addEventListener('keydown', (e) => {
+        if (e.key === ' ' || e.key === 'Enter') {
+          e.preventDefault();
+          applySelection(card);
+        }
+      });
+    });
+
+    if (confirmBtn) {
+      confirmBtn.addEventListener('click', () => {
+        if (!selectedId) return;
+        // Proceed with flow feedback
+        confirmBtn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">sync</span><span>Registrando Voto...</span>';
+        setTimeout(() => {
+          alert('Selección confirmada para: ' + selectedLabel.textContent + '. Pasando al resumen final.');
+        }, 350);
+      });
+    }
+  })();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="bg-secondary-container text-on-secondary-container font-bold"><div class="h-24 px-gutter flex items-center justify-between gap-space-md"><a class="flex-1 h-14 rounded-xl flex items-center justify-center gap-2 px-3 text-on-surface-variant bg-surface-container hover:bg-surface-container-high transition-all text-center" data-path="tarjeton-presidencial" href="#"><span class="material-symbols-outlined text-[22px]">looks_one</span><div class="flex flex-col text-left leading-tight"><span class="font-contest-meta text-contest-meta opacity-80 uppercase">Etapa 1</span><span class="font-label-md text-label-md truncate">Presidencia</span></div></a><a class="flex-1 h-14 rounded-xl flex items-center justify-center gap-2 px-3 text-on-surface-variant bg-surface-container hover:bg-surface-container-high transition-all text-center" data-path="tarjeton-legislativo" href="#"><span class="material-symbols-outlined text-[22px]">looks_two</span><div class="flex flex-col text-left leading-tight"><span class="font-contest-meta text-contest-meta opacity-80 uppercase">Etapa 2</span><span class="font-label-md text-label-md truncate">Congreso</span></div></a><a class="flex-1 h-14 rounded-xl flex items-center justify-center gap-2 px-3 text-on-surface-variant bg-surface-container hover:bg-surface-container-high transition-all text-center" data-path="resumen-votacion" href="#"><span class="material-symbols-outlined text-[22px]">looks_3</span><div class="flex flex-col text-left leading-tight"><span class="font-contest-meta text-contest-meta opacity-80 uppercase">Etapa 3</span><span class="font-label-md text-label-md truncate">Verificación</span></div></a><button aria-label="Solicitar Asistencia" class="min-w-[56px] h-14 rounded-xl bg-error-container text-on-error-container flex items-center justify-center px-4 gap-2 font-label-md text-label-md shrink-0 hover:opacity-95 transition-opacity"><span class="material-symbols-outlined text-[24px]">support_agent</span><span class="hidden md:inline">Ayuda</span></button></div></nav></body></html>
